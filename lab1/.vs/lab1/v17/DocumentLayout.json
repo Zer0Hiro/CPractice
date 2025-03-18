@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F54A1A82-51F7-4899-8E23-1EC2F9BD619F}|lab1\\lab1.vcxproj|C:\\Users\\Zero\\Documents\\github\\CPractice\\lab1\\lab1\\ex2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F54A1A82-51F7-4899-8E23-1EC2F9BD619F}|lab1\\lab1.vcxproj|solutionrelative:lab1\\ex2.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F54A1A82-51F7-4899-8E23-1EC2F9BD619F}|lab1\\lab1.vcxproj|C:\\Users\\Zero\\Documents\\github\\CPractice\\lab1\\lab1\\ex1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F54A1A82-51F7-4899-8E23-1EC2F9BD619F}|lab1\\lab1.vcxproj|solutionrelative:lab1\\ex1.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,22 +24,14 @@
               "RelativeDocumentMoniker": "lab1\\ex2.c",
               "ToolTip": "C:\\Users\\Zero\\Documents\\github\\CPractice\\lab1\\lab1\\ex2.c",
               "RelativeToolTip": "lab1\\ex2.c",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-03-18T07:35:07.714Z",
+              "WhenOpened": "2025-03-18T11:06:06.549Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ex1.c",
-              "DocumentMoniker": "C:\\Users\\Zero\\Documents\\github\\CPractice\\lab1\\lab1\\ex1.c",
-              "RelativeDocumentMoniker": "lab1\\ex1.c",
-              "ToolTip": "C:\\Users\\Zero\\Documents\\github\\CPractice\\lab1\\lab1\\ex1.c",
-              "RelativeToolTip": "lab1\\ex1.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
-              "WhenOpened": "2025-03-18T06:48:47.736Z"
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }
