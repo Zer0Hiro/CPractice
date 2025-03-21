@@ -22,6 +22,4 @@ int main()
 	}
 	//printf("%c%c%c%c%c%c", x, x, x, x, x, x);
 	return 0;
-
-
 }
