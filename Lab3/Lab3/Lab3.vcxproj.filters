@@ -14,21 +14,4 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="pointers.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ex1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ex1_1.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ex2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DoublePointer.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
