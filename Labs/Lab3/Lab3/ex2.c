@@ -4,24 +4,36 @@
 
 int main()
 {
-	int i, num,count=0;
+	int i, num, res, count = 0;
+	//assign user value to 'num', while defining 'i' & 'count'
 	printf("Enter an integer number, please: ");
 	scanf("%d", &num);
-	num = abs(num);
+	res = abs(num);
+
 	if (num == 0)
 	{
 		printf("Infinity");
 		return 0;
 	}
-	for (i = 1; i < num; i++)
+
+	//loop that check all dividers 
+	for (i = 1; i < res; i++)
 	{
-		if ((num % i) == 0)
+		if ((res % i) == 0)
 		{
 			count++;
 			printf("%d ", i);
 		}
-			
+
 	}
+
+	//If number is negative adds additional divider
+	if (num < 0)
+	{
+		count++;
+		printf("%d", res);
+	}
+	//counts all dividers 
 	printf("\ncount=%d", count);
 	return 0;
 }
