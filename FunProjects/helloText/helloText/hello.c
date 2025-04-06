@@ -2,14 +2,17 @@
 #include <stdio.h>
 // Includes Sleep function
 #include <windows.h>  
+// Includes console clear function
+#include <stdlib.h>
+
 
 void TextCreator(char arr[], int size);
 
 int main()
 {
-	int size = 13;
 	char arr[] = "Hello World!";
-	TextCreator(arr, size);
+	//scanf("%s", &arr);
+	TextCreator(arr, sizeof(arr));
 	return 110;
 }
 
@@ -45,8 +48,9 @@ void TextCreator(char arr[], int size)
 				break;
 			}
 		}
+		//system("cls");
 		printf("%s%c\n", word, (char)ascii);
-		Sleep(10);
+		Sleep(1);
 		ascii++;
 	}
 }
