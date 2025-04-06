@@ -6,13 +6,15 @@
 #include <stdlib.h>
 
 
-void TextCreator(char arr[], int size);
+void TextCreator(char arr[], int);
 
 int main()
 {
-	char arr[] = "Hello World!";
-	//scanf("%s", &arr);
-	TextCreator(arr, sizeof(arr));
+	char arr[100];
+	printf("Enter the string (not more than 100 symbols)");
+	fgets(arr, 100, stdin);
+	//printf("%d", sizeof(arr));
+	TextCreator(arr, strlen(arr));
 	return 110;
 }
 
@@ -20,8 +22,8 @@ int main()
 void TextCreator(char arr[], int size)
 {
 	int i, ascii = 97;
-	char word[13] = { ' ' };
-	for (i = 0; i < size-1;)
+	char word[100] = { ' ' };
+	for (i = 0; i < size;)
 	{	
 		// ascii = 97 - 122 , 65 - 90 , 32 - 64 
 		if (arr[i] == (char)ascii)
@@ -49,7 +51,8 @@ void TextCreator(char arr[], int size)
 			}
 		}
 		//system("cls");
-		printf("%s%c\n", word, (char)ascii);
+		if (i != size) printf("%s%c\n", word, (char)ascii);
+		else break;
 		Sleep(1);
 		ascii++;
 	}
