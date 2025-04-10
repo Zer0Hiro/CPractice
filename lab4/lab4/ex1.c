@@ -35,6 +35,7 @@ int main()
 // Count
 void Set_Mid(double x1, double y1, double x2, double y2, double* p_mx, double* p_my)
 {
+  
 	*p_mx = (x1 + x2) / 2;
 	*p_my = (y1 + y2) / 2;
 }
