@@ -8,6 +8,9 @@ int main()
 {
 	double x1, y1, x2, y2, midx, midy, check;
 	int i;
+	printf("This program can find the midpoint of a line given two endpoints.\n"
+		"Please enter coordinates for (x1, y1) and (x2, y2).\n");
+
 	for (i = 0; i < 2;)
 	{	
 		printf("Input Point coordinates (x,y): ");
