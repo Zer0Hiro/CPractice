@@ -2,10 +2,6 @@
 #include <stdio.h>
 #define N 6
 
-int f(int A[], int n);
-int scan(int nums[], int number, int len, int pos);
-
-
 /*
 This program will allow to check if array contains numbers with specific instruction:
 
@@ -13,6 +9,9 @@ The program will return 1 if: for every EVEN/odd number there is EVEN/odd amount
 
 The program will return 0 if: For every EVEN/odd number there is ODD/even amount of numbers....
 */
+
+int f(int A[], int n);
+int scan(int* nums, int number, int len, int pos);
 
 // This function will get 6 numbers from user and return 0 or 1
 int main()
@@ -26,7 +25,7 @@ int main()
 		if (scanf("%d",&array[i]) == 0) printf("Wrong input\n"); //Error
 		else i++;
 	}
-	printf("The output is: %d", f(&array,N));
+	printf("The output is: %d", f(array,N));
 	return 1;
 }
 
