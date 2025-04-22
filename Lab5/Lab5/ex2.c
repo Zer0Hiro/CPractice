@@ -4,12 +4,15 @@
 #include <time.h>
 #define N 7
 
+// Function declerations.
 void print(int arr[], int size, char name);
 int greater(int arr1[], int arr2[], int size);
 
 int main()
 {
 	int arr1[N], arr2[N], i = 0, j = 0, maxValue = 0, index;
+
+	// This seeds a random number based on the time.
 	srand(time(NULL));
 
 	// Get all numbers for arr1[]
@@ -25,7 +28,7 @@ int main()
 	printf("Enter max value greater than 0: ");
 	while (maxValue <= 0)
 	{
-		if (scanf("%d", &maxValue) == 0) printf("Wrong input");
+		if (scanf("%d", &maxValue) == 0 || maxValue <= 0) printf("Wrong input");
 	}
 
 	// Get all values for arr2[]
@@ -40,7 +43,7 @@ int main()
 	print(arr2, N, '2');
 	index = greater(arr1, arr2, N);
 	if (index != -1) printf("\nThe index is %d (number %d and %d)", index, arr1[index], arr2[index]);
-	else printf("No!!!");
+	else printf("\nNo!!!");
 	return 1;
 }
 
