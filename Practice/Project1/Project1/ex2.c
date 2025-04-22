@@ -7,8 +7,12 @@ int distance(char A[], char B[]);
 
 int main()
 {
-	int strA[N], strB[N];
+	int i, strA[N], strB[N];
 	
+	for (i = 0; i < 2;)
+	{
+
+	}
 	// Get first string
 	printf("Enter the first string: ");
 	fgets(strA, N, stdin);
