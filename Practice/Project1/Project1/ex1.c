@@ -35,7 +35,7 @@ int f(int A[], int n)
 	int i, k, pos, count;
 	for (i = 0; i < n; i++)
 	{
-		int storage[N] = {0};
+		int storage[N] = {-1,-1,-1,-1,-1,-1};
 		pos = 0;
 		count = 0;
 		for (k = 0; k < n; k++)
