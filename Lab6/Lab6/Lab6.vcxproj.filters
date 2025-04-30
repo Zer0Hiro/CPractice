@@ -21,5 +21,14 @@
     <ClCompile Include="ex2.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ex3.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ex4.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
