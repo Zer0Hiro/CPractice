@@ -9,10 +9,6 @@ int main()
 {
 	int i, strA[N], strB[N];
 	
-	for (i = 0; i < 2;)
-	{
-
-	}
 	// Get first string
 	printf("Enter the first string: ");
 	fgets(strA, N, stdin);

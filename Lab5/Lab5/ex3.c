@@ -63,7 +63,7 @@ void replaceSubstring(char* str, char* substr)
 		{
 			for (j; j < sublen; j++)
 			{
-				*pos -= 32;
+				if (*pos >= 97) *pos -= 32;
 				pos++;
 			}
 			j = 0;
