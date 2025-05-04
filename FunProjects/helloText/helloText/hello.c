@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 
+
 void TextCreator(char arr[], int);
 
 int main()
@@ -53,7 +54,7 @@ void TextCreator(char arr[], int size)
 		//system("cls");
 		if (i != size) printf("%s%c\n", word, (char)ascii);
 		else break;
-		Sleep(1);
+		Sleep(10);
 		ascii++;
 	}
 }
