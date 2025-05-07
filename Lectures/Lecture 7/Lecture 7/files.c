@@ -16,7 +16,7 @@ int main()
 	/* MODE OPTIONS
 		r - Read Only
 		w - Write (Will erase previous file if already existed)
-		a - Append info to already existing fie
+		a - Append info to already existing file
 		r+ - Read + Write
 		w+ - Write + Read (Will erase previous file if already existed)
 
@@ -33,7 +33,8 @@ int main()
 	//FSCANF
 	int num;
 	fscanf(NameOfFile, "%d", &num); // Reads info from file and puts it in num
-	
+	// If instead of NameOfFile insert stdin will work exactly like scanf
+
 	// NOTE
 	// Will return fscanf = -1 at the end of file (basically means end of file)
 
@@ -41,4 +42,6 @@ int main()
 	int input;
 	fprintf(NameOfFile, "%TypeOfFile", input); // Prints input inside the file
 
+	//FTELL
+	ftell(NameOfFile); // Returns the position of pointer atm
 }
