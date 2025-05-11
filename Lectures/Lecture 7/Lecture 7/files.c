@@ -44,4 +44,17 @@ int main()
 
 	//FTELL
 	ftell(NameOfFile); // Returns the position of pointer atm
+
+	// ATOI ATOF ATOL
+	int num1 = atoi(NameOfString); // transfers from ASCII -> Integer
+	float num2 = atof(NameOfString); // Transfers from ASCII -> Float
+	double num2 = atol(NameOfString); // Transfers from ASCII -> double or longfloat
+
+	// 
+	while(fscanf() != EOF);
+	while(fgets()!=NULL);
+
+	// if there is a space between values use ex(1 2 3 4 5) use -> SCANF
+	// if there are in a row without spaces ex(123567) use -> FGETS 
 }
+
