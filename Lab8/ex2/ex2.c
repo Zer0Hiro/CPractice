@@ -45,7 +45,7 @@ int InputData(student **p_array, FILE *fp)
         temp = (student *)realloc(arr, i * sizeof(student));
         if (temp == NULL)
         {
-            free(temp);
+            free(arr);
             Error_Msg("Memory error");
         }
         arr = temp;
@@ -53,7 +53,15 @@ int InputData(student **p_array, FILE *fp)
 
     *p_array = arr;
 
-    return i; /*return the number of students*/
+    temp = (student *)realloc(arr, (i - 1) * sizeof(student));
+    if (temp == NULL)
+    {
+        free(arr);
+        Error_Msg("Memory error");
+    }
+    arr = temp;
+
+    return i - 1; /*return the number of students*/
 }
 
 void OutputData(int arr_size, student *arr, FILE *fp)
@@ -67,7 +75,7 @@ void OutputData(int arr_size, student *arr, FILE *fp)
             if (arr[i].grades[j] > arr[i].grades[biggest])
                 biggest = j;
         }
-        fprintf(fp, "%s %d\n", arr[i].name, arr[biggest].grades);
+        fprintf(fp, "%s %d\n", arr[i].name, arr[i].grades[biggest]);
     }
 }
 

@@ -42,6 +42,7 @@ int main()
     fprintf(out, "Adress:%s", temp.Addr);
 
     // Close and save file
+    fclose(in);
     fclose(out);
     return 0;
 }

@@ -1,8 +1,6 @@
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
 #define N 4
 
 typedef struct COMPLEX
@@ -12,22 +10,22 @@ typedef struct COMPLEX
 } Complex;
 
 float CRadius(Complex);
-void Error_Msg(char* str);
-void InputAndWriteToFile(FILE* f);
-int CheckFile(FILE* f, float m);
+void Error_Msg(char *str);
+void InputAndWriteToFile(FILE *f);
+int CheckFile(FILE *f, float m);
 
 int main()
 {
 
-    FILE* f;
-    f = fopen("complex_number.txt", "w");
+    FILE *f;
+    f = fopen("complex_number.txt", "w+");
     InputAndWriteToFile(f);
 
     printf("\nThere are %d big numbers\n", CheckFile(f, 4));
     return 0;
 }
 
-void Error_Msg(char* str)
+void Error_Msg(char *str)
 {
     printf("\n%s", str);
     exit(1);
@@ -41,7 +39,7 @@ float CRadius(Complex c)
     return r;
 }
 
-void InputAndWriteToFile(FILE* f)
+void InputAndWriteToFile(FILE *f)
 {
     int i;
     float radius;
@@ -59,7 +57,7 @@ void InputAndWriteToFile(FILE* f)
     }
 }
 
-int CheckFile(FILE* f, float m)
+int CheckFile(FILE *f, float m)
 {
     float temp, garb1, garb2;
     int i, count = 0;
@@ -67,11 +65,9 @@ int CheckFile(FILE* f, float m)
 
     for (i = 0; i < N; i++)
     {
-        if (fscanf(f, "%lf %lf%lf", &garb1, &garb2, &temp) == 3)
-        {
+        if (fscanf(f, "%f %f %f", &garb1, &garb2, &temp) == 3)
             if (temp > m)
                 count++;
-        }
     }
     return count;
 }
