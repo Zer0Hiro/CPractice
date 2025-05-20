@@ -9,8 +9,8 @@ int main()
 
     printf("Enter a number");
     scanf("%d", &x);
-    printf("There are %d bits equal to one in %d\n", Bit_Count(x), x);
-    printf("The binary representation of %d is ", x);
+    printf("There are %d bits equal to one in %u\n", Bit_Count(x), x);
+    printf("The binary representation of %u is ", x);
     Bin_Print(x);
 
     return 0;
@@ -33,10 +33,10 @@ int Bit_Count(unsigned int x)
 void Bin_Print(unsigned int x)
 {
     int i;
-    int size = sizeof(unsigned int)*8;
-    for(i = size; i < sizeof(unsigned int)*8; i--)
+    unsigned int mask = 1;
+    int size = sizeof(x) * 8;
+    for (i = size - 1; i >= 0; i--)
     {
-        mask << i // moving it left
+        printf("%d", (x >> i) & mask); // will move number and not mask
     }
-
 }
