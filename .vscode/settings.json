@@ -1,6 +1,10 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "xiosbase": "c",
+        "xlocale": "c",
+        "xutility": "c",
+        "format": "c"
     }
 }
