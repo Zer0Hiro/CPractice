@@ -41,9 +41,9 @@ void NewInput(FILE *old, FILE *new)
     {
         num = 0; // Reset Number
         fgets(tempGroup, 5, old); // Get temp Group
-        fgets(tempGrade,4,old); // Get temp Grade
+        fgets(tempGrade,4,old); // Get first temp Grade
         num += atoi(tempGrade);
-        fgets(tempGrade,4,old); // Get temp Grade
+        fgets(tempGrade,4,old); // Get second temp Grade
         num += atoi(tempGrade);
         
         if(strcmp(tempGroup,"Comp") == 0)
