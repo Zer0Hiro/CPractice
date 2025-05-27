@@ -32,7 +32,7 @@ void Error_Msg(char *error);
 int main()
 {
     FILE *input, *output;
-    University database, *pdatabase = &database;
+    University database;
     int inputR = 0;
     char choice;
     // Open Input file
@@ -46,10 +46,10 @@ int main()
         switch (choice)
         {
         case '1':
-            AddStudent(pdatabase, input);
+            AddStudent(&database, input);
             if ((output = fopen("output.txt", "w")) == NULL)
             {
-                EOP(pdatabase); // Free buffered memory
+                EOP(&database); // Free buffered memory
                 Error_Msg("The output file is wrong");
             }
             fprintf(output, "Input accepted");
@@ -57,22 +57,22 @@ int main()
             break;
         case '2':
             fprintf(output, "\nOPTION 2\n");
-            printHW(pdatabase, output);
+            printHW(&database, output);
             break;
         case '3':
             fprintf(output, "\nOPTION 3\n");
-            printFG(pdatabase, output);
+            printFG(&database, output);
             break;
         case '4':
             fprintf(output, "\nOPTION4\n\nNO HW SUBMISSIONS");
-            printNOHW(pdatabase, output);
+            printNOHW(&database, output);
             break;
         case '5':
             fprintf(output, "\nOPTION 5\n");
-            changeData(pdatabase, output);
+            changeData(&database, output);
             break;
         case '6':
-            EOP(pdatabase);
+            EOP(&database);
             exit(1);
         default:
             printf("Wrong Input, please try Again");
