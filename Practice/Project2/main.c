@@ -53,6 +53,7 @@ int main()
                 Error_Msg("The output file is wrong");
             }
             fprintf(output, "Input accepted");
+            fclose(input);
             inputR = 1;
             break;
         case '2':
@@ -73,7 +74,8 @@ int main()
             break;
         case '6':
             EOP(&database);
-            exit(1);
+            fclose(output);
+            return 1;
         default:
             printf("Wrong Input, please try Again");
             break;

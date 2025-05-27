@@ -5,12 +5,6 @@ Student 1: Nir 32251 99.80 1
 Student 2: Ely 12347 77.89 1
 Student 3: Moshe 45321 50.34 1
 Student 4: Avi 31456 49.78 0
-OPTION 2
-
-Student 1: Nir 32251 99.80 1
-Student 2: Ely 12347 77.89 1
-Student 3: Moshe 45321 50.34 1
-Student 4: Avi 31456 49.78 0
 OPTION 3
 
 BEFORE:
@@ -41,11 +35,30 @@ Student 1: Nir 32251 99.80 0 final: 84.83
 Student 2: Ely 12347 77.89 1 final: 81.21
 Student 3: Moshe 45321 50.34 1 final: 50.34
 Student 4: Avi 31456 49.78 0 final: 49.78
-OPTION4
+OPTION 3
 
-NO HW SUBMISSIONS
-Student 1: Nir 32251
-Student 4: Avi 31456
+BEFORE:
+Student 1: Nir 32251 99.80 0
+Student 2: Ely 12347 77.89 1
+Student 3: Moshe 45321 50.34 1
+Student 4: Avi 31456 49.78 0
+AFTER:
+Student 1: Nir 32251 99.80 0 final: 84.83
+Student 2: Ely 12347 77.89 1 final: 81.21
+Student 3: Moshe 45321 50.34 1 final: 50.34
+Student 4: Avi 31456 49.78 0 final: 49.78
+OPTION 3
+
+BEFORE:
+Student 1: Nir 32251 99.80 0
+Student 2: Ely 12347 77.89 1
+Student 3: Moshe 45321 50.34 1
+Student 4: Avi 31456 49.78 0
+AFTER:
+Student 1: Nir 32251 99.80 0 final: 84.83
+Student 2: Ely 12347 77.89 1 final: 81.21
+Student 3: Moshe 45321 50.34 1 final: 50.34
+Student 4: Avi 31456 49.78 0 final: 49.78
 OPTION4
 
 NO HW SUBMISSIONS
