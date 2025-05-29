@@ -57,19 +57,19 @@ int main()
             inputR = 1;
             break;
         case '2':
-            fprintf(output, "\nOPTION 2\n");
+            fprintf(output, "\n\nOPTION 2");
             printHW(&database, output);
             break;
         case '3':
-            fprintf(output, "\nOPTION 3\n");
+            fprintf(output, "\n\nOPTION 3");
             printFG(&database, output);
             break;
         case '4':
-            fprintf(output, "\nOPTION4\n\nNO HW SUBMISSIONS");
+            fprintf(output, "\n\nOPTION4\nNO HW SUBMISSIONS");
             printNOHW(&database, output);
             break;
         case '5':
-            fprintf(output, "\nOPTION 5\n");
+            fprintf(output, "\n\nOPTION 5");
             changeData(&database, output);
             break;
         case '6':
@@ -138,7 +138,7 @@ void AddStudent(University *uni, FILE *in)
         temp = (Student *)realloc(uni->students, sizeof(Student) * uni->population);
         if (temp == NULL)
         {
-            for (i = 0; i < uni->population; i++)
+            for (i = 0; i < pos; i++)
             {
                 free(uni->students[i].name);
             }
@@ -214,7 +214,7 @@ void printFG(University *uni, FILE *out)
     printHW(uni, out);
 
     // After
-    fprintf(out, "\nAFTER:");
+    fprintf(out, "\n\nAFTER:");
     for (i = 1; i <= uni->population; i++)
     {
         fgrade = uni->students[i - 1].grade;
@@ -280,6 +280,7 @@ int changeData(University *uni, FILE *out)
         if (strcmp(name, uni->students[i].name) == 0)
         {
             uni->students[i].applied[hw_num - 1] = grade;
+            printHW(uni,out);
             return 1;
         }
     }
