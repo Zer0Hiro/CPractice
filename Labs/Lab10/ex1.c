@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define N 5
 
@@ -13,7 +12,7 @@ typedef struct Item
 
 int main()
 {
-    int i, j;
+    int i, count = 0;
     Item *Head = NULL, *temp;
 
     // Create node
@@ -35,8 +34,9 @@ int main()
 
         // Get data for node
         printf("Enter a new code and name: ");
-        while (scanf("%d %s", &(temp->code), temp->name) != 2)
+        while (scanf("%d %s", &(temp->code), temp->name) != 2 && count != 3)
         {
+            count++;
             printf("Wrong input try again");
             rewind(stdin);
             printf("\nEnter a new code and name: ");
