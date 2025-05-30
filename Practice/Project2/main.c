@@ -8,7 +8,7 @@ typedef struct
     char *name;
     long id;
     float grade;
-    char applied[5];
+    char applied[6];
     char hw_grade;
 } Student;
 
@@ -161,7 +161,7 @@ void AddStudent(University *uni, FILE *in)
         strcpy(uni->students[pos].name, tempName);
 
         // Copy all relevant info (id/grade/applied)
-        fscanf(in, "%ld %f %s", &uni->students[pos].id, &uni->students[pos].grade, &uni->students[pos].applied[i]);
+        fscanf(in, "%ld %f %s", &uni->students[pos].id, &uni->students[pos].grade, uni->students[pos].applied);
     }
 }
 
