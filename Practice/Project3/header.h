@@ -16,11 +16,11 @@ typedef struct node
 
 // Functions
 void CreateLink(Node **head, Node **tail, int size, int *numbers);
-void FreeAll(Node *head);
-int Jumpy(Node **head, Node **tail, int amount);
-void ErrorMsg(char *msg);
 int RemoveBlock(Node **pos, Node **head, Node **tail, int direction);
+int Jumpy(Node **head, Node **tail, int amount);
 void JumpDir(Node **pos, int direction);
+void FreeAll(Node *head);
+void ErrorMsg(char *msg);
 void PrintResult(Node *head);
 
 

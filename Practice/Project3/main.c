@@ -8,9 +8,11 @@ int main()
     int nums[N];
     int i;
 
+    // Get steps from user
     printf("Enter the amount of steps please: ");
     scanf("%d", &steps);
 
+    // Enter 10 numbers
     printf("\nEnter 10 integers please: ");
     for (i = 0; i < N; i++)
     {
@@ -20,7 +22,9 @@ int main()
     // Create list
     CreateLink(Phead, Ptail, N, nums);
 
+    // Get amount of steps
     count = Jumpy(Phead, Ptail, steps);
+    
     printf("The amount of steps are: %d", count);
     PrintResult(*Phead);
     FreeAll(head);
