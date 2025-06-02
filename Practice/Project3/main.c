@@ -8,7 +8,7 @@ int main()
     int nums[N];
     int i;
 
-    // Get steps from user
+    // Amount of steps for program
     printf("Enter the amount of steps please: ");
     scanf("%d", &steps);
 
@@ -22,9 +22,8 @@ int main()
     // Create list
     CreateLink(Phead, Ptail, N, nums);
 
-    // Get amount of steps
+    // Start of jumps
     count = Jumpy(Phead, Ptail, steps);
-    
     printf("The amount of steps are: %d", count);
     PrintResult(*Phead);
     FreeAll(head);

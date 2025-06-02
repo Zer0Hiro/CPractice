@@ -8,7 +8,7 @@ void CreateLink(Node **head, Node **tail, int size, int *numbers)
     int i;
 
     // Create new node and add it to Head
-    for (i = 1; i <= size; i++)
+    for (i = size; i >= 1; i--)
     {
         temp = (Node *)malloc(sizeof(Node));
         if (temp == NULL)
@@ -24,6 +24,7 @@ void CreateLink(Node **head, Node **tail, int size, int *numbers)
         {
             temp->next = NULL;
             *head = temp;
+            *tail = temp;
         }
         else // Head exist
         {
@@ -37,38 +38,38 @@ void CreateLink(Node **head, Node **tail, int size, int *numbers)
 // This function will jump to new position
 int Jumpy(Node **head, Node **tail, int amount)
 {
-    Node **pos = head;
+    Node *pos = *head;
     int i, j, count = 0, jsize;
 
     for (i = 0; i < amount; i++)
     {
 
-        if ((*pos) == NULL)
+        if ((pos) == NULL)
         {
             printf("\nThe game ends: out-of-play area\n");
             return count;
         }
 
         // Size of jump
-        jsize = (*pos)->num;
+        jsize = (pos)->num;
 
         // If number = 1 or -1
         if (jsize == 1 || jsize == -1)
-            RemoveBlock(pos, jsize);
+            RemoveBlock(&pos, head, tail, jsize);
 
         // If number = 0
         else if (jsize == 0)
         {
-            printf("\nDEAD END");
+            printf("\nDEAD END\n");
             return count;
         }
 
         else
-            JumpDir(pos, jsize);
+            JumpDir(&pos, jsize);
 
         count++;
     }
-    printf("You reached max amount of steps");
+    printf("\nYou reached max amount of steps\n");
     return count;
 }
 
@@ -116,14 +117,41 @@ void FreeAll(Node *head)
 }
 
 // This function will remove one specific block
-void RemoveBlock(Node **pos, int direction)
+int RemoveBlock(Node **pos, Node **head, Node **tail, int direction)
 {
-    Node *temp;
+    Node *temp = *pos;
 
-    // Redirect blocks
-    temp = *pos;
-    (*pos)->prev->next = (*pos)->next;
-    (*pos)->next->prev = (*pos)->prev;
+    // In case we try to remove Head
+    if (temp->prev)
+    {
+        temp->prev->next = temp->next;
+    }
+    else
+    {
+        *head = temp->next;
+        if (direction < 0)
+        {
+            *pos = NULL;
+            free(temp);
+            return 0;
+        }
+    }
+
+    // In case we try to remove Tail
+    if (temp->next)
+    {
+        temp->next->prev = temp->prev;
+    }
+    else
+    {
+        *tail = temp->prev;
+        if (direction > 0)
+        {
+            *pos = NULL;
+            free(temp);
+            return 0;
+        }
+    }
 
     // Check direction of jump
     if (direction > 0)
@@ -133,6 +161,7 @@ void RemoveBlock(Node **pos, int direction)
 
     // Free block
     free(temp);
+    return 0;
 }
 
 // This function prints requested error and closes the program
@@ -146,10 +175,11 @@ void ErrorMsg(char *msg)
 void PrintResult(Node *head)
 {
     printf("\nFinal array is: [ ");
-    while(head != NULL)
+    while (head != NULL)
     {
-        printf("%d, ",head->num);
+        printf("%d", head->num);
+        if(head->next) printf(", ");
         head = head->next;
     }
-    printf(" ]");
+    printf("]");
 }

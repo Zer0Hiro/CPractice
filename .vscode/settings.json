@@ -6,6 +6,7 @@
         "xlocale": "c",
         "xutility": "c",
         "format": "c",
-        "header.h": "c"
+        "header.h": "c",
+        "stdlib.h": "c"
     }
 }
