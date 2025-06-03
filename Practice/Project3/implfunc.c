@@ -8,7 +8,7 @@ void CreateLink(Node **head, Node **tail, int size, int *numbers)
     int i;
 
     // Create new node and add it to Head
-    for (i = size; i >= 1; i--)
+    for (i = 0; i < size; i++)
     {
         temp = (Node *)malloc(sizeof(Node));
         if (temp == NULL)
@@ -17,7 +17,7 @@ void CreateLink(Node **head, Node **tail, int size, int *numbers)
             ErrorMsg("Memory allocation failed");
         }
 
-        temp->num = numbers[i - 1];
+        temp->num = numbers[i];
         temp->prev = NULL;
 
         if (*head == NULL)
