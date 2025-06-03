@@ -15,12 +15,12 @@ typedef struct node
 } Node;
 
 // Functions
-void CreateLink(Node**, Node**, int, int*);
-void FreeAll(Node*);
-int Jumpy(Node**, Node**, int);
-void ErrorMsg(char*);
-int RemoveBlock(Node**, Node**, Node**, int);
-void JumpDir(Node**, int);
-void PrintResult(Node*);
+void CreateLink(Node **head, Node **tail, int size, int *numbers);
+void FreeAll(Node *head);
+int Jumpy(Node **head, Node **tail, int amount);
+void ErrorMsg(char *msg);
+int RemoveBlock(Node **pos, Node **head, Node **tail, int direction);
+void JumpDir(Node **pos, int direction);
+void PrintResult(Node *head);
 
 #endif // End of Header

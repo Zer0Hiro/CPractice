@@ -3,7 +3,6 @@
 int main()
 {
     Node *head = NULL, *tail = NULL;
-    Node **Phead = &head, **Ptail = &tail;
     int count, steps;
     int nums[N];
     int i;
@@ -20,12 +19,12 @@ int main()
     }
 
     // Create list
-    CreateLink(Phead, Ptail, N, nums);
+    CreateLink(&head, &tail, N, nums);
 
-    // Start of jumps
-    count = Jumpy(Phead, Ptail, steps);
+    // Start of the game
+    count = Jumpy(&head, &tail, steps);
     printf("The amount of steps are: %d", count);
-    PrintResult(*Phead);
+    PrintResult(head);
     FreeAll(head);
     return 0;
 }

@@ -39,7 +39,7 @@ void CreateLink(Node **head, Node **tail, int size, int *numbers)
 int Jumpy(Node **head, Node **tail, int amount)
 {
     Node *pos = *head;
-    int i, j, count = 0, jsize;
+    int i, j, jsize;
 
     for (i = 0; i < amount; i++)
     {
@@ -47,7 +47,7 @@ int Jumpy(Node **head, Node **tail, int amount)
         if ((pos) == NULL)
         {
             printf("\nThe game ends: out-of-play area\n");
-            return count;
+            return i;
         }
 
         // Size of jump
@@ -61,16 +61,14 @@ int Jumpy(Node **head, Node **tail, int amount)
         else if (jsize == 0)
         {
             printf("\nDEAD END\n");
-            return count;
+            return i;
         }
 
         else
             JumpDir(&pos, jsize);
-
-        count++;
     }
     printf("\nYou reached max amount of steps\n");
-    return count;
+    return i;
 }
 
 // This function will allow to jump to both direction depending on number sign
@@ -181,5 +179,5 @@ void PrintResult(Node *head)
         if(head->next) printf(", ");
         head = head->next;
     }
-    printf("]");
+    printf(" ]");
 }
