@@ -88,14 +88,12 @@ void JumpDir(Node **pos, int direction)
     {
         if ((*pos) != NULL)
         {
+            // Move right (pos number)
             if (flag != 1)
-            {
                 (*pos) = (*pos)->next;
-            }
+            // Move left (neg number)
             else
-            {
                 (*pos) = (*pos)->prev;
-            }
         }
         else
             break;
@@ -106,7 +104,7 @@ void JumpDir(Node **pos, int direction)
 void FreeAll(Node *head)
 {
     Node *temp;
-    while (head != NULL)
+    while (head)
     {
         temp = head;
         head = head->next;
@@ -173,10 +171,11 @@ void ErrorMsg(char *msg)
 void PrintResult(Node *head)
 {
     printf("\nFinal array is: [ ");
-    while (head != NULL)
+    while (head)
     {
         printf("%d", head->num);
-        if(head->next) printf(", ");
+        if (head->next)
+            printf(", ");
         head = head->next;
     }
     printf(" ]");

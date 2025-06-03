@@ -104,20 +104,21 @@ void AddAsFirst(Item *ptr, List *L)
 {
     ptr->next = L->head;
     L->head = ptr;
-    if(L->tail == NULL)
+    if (L->tail == NULL)
         L->tail = ptr;
+    L->count += 1;
 }
 
 // This function will add node the the tail of the list
 void AddAsLast(Item *ptr, List *L)
 {
     ptr->next = NULL;
-    if(L->tail != NULL)
+    if (L->tail != NULL)
         L->tail->next = ptr;
     L->tail = ptr;
-    if(L->head == NULL)
+    if (L->head == NULL)
         L->head = ptr;
-
+    L->count += 1;
 }
 
 // This function will free the whole list
@@ -143,15 +144,9 @@ void MoveToAnotherList(List *orig, List *pos, List *neg)
         temp = orig->head;
         orig->head = orig->head->next;
         if (temp->num >= 0)
-        {
             AddAsLast(temp, pos);
-            pos->count += 1;
-        }
         else
-        {
             AddAsFirst(temp, neg);
-            neg->count += 1;
-        }
         orig->count -= 1;
     }
     orig->tail = NULL;
