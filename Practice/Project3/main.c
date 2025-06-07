@@ -12,7 +12,7 @@ int main()
     scanf("%d", &steps);
 
     // Enter 10 numbers
-    printf("\nEnter 10 integers please: ");
+    printf("\nEnter %d integers please: ", N);
     for (i = 0; i < N; i++)
     {
         scanf("%d", &nums[i]);

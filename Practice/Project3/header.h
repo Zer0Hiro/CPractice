@@ -2,6 +2,7 @@
 #define FUNC_UTILS_H
 
 // Include + Define
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include <stdio.h>
 #define N 10
