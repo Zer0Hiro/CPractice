@@ -7,6 +7,8 @@
         "xutility": "c",
         "format": "c",
         "header.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "ex1.h": "c",
+        "ex2.h": "c"
     }
 }
