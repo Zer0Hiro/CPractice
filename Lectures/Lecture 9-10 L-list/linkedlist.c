@@ -11,10 +11,11 @@ void add(struct node *head, struct node *tail, struct node
 }
 
 // You can also use structures for linkedlist
-typedef struct 
+typedef struct Node
 {
+    int data;
     struct Node *head;
-    struct Node *tail
+    struct Node *tail;
 } log;
 
 // Possible to create Pointer already in struct
@@ -23,3 +24,7 @@ typedef struct list
     char *head;
     /* data */
 }List, *Plist;
+
+
+//    IMPORTANT!!!
+// Always start with Node *head = NULL

@@ -27,7 +27,7 @@ int main()
 	scanf("%s", a.name);
 
 	struct Person* p; // Can also get pointer
-	p = &b; // Now P has adress of a in structure;
+	p = &b; // Now P has adress of a structure;
 	p -> age = 13; // Now we can use pointer to send new data to struct
 	// Also can be (*p).age = 25 same type shit
 	return 0;

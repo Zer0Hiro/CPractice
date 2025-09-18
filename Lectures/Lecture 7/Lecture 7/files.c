@@ -5,11 +5,11 @@
 int main()
 {
 	// To create pointer for the file
-	FILE* NameOfFile;
+	FILE* PointerToFile;
 
 	//FOPEN
-	NameOfFile = fopen("name.txt", "mode(w,r)"); // Opens file (name.txt) in specific mode
-	if (NameOfFile == NULL)
+	PointerToFile = fopen("name.txt", "mode(w,r)"); // Opens file (name.txt) in specific mode
+	if (PointerToFile == NULL)
 	{
 		// What to do if file didn't open
 	}
@@ -25,14 +25,14 @@ int main()
 	*/
 
 	//FCLOSE
-	fclose(NameOfFile); // Will close and save file (Also free some memory)
+	fclose(PointerToFile); // Will close and save file (Also free some memory)
 	
 	//				IMPORTANT!!!
 	// no need to use fclose() if we use exit()
 
 	//FSCANF
 	int num;
-	fscanf(NameOfFile, "%d", &num); // Reads info from file and puts it in num
+	fscanf(PointerToFile, "%d", &num); // Reads info from file and puts it in num
 	// If instead of NameOfFile insert stdin will work exactly like scanf
 
 	// NOTE
@@ -40,10 +40,10 @@ int main()
 
 	//FPRINTF
 	int input;
-	fprintf(NameOfFile, "%TypeOfFile", input); // Prints input inside the file
+	fprintf(PointerToFile, "%TypeOfFile", input); // Prints input inside the file
 
 	//FTELL
-	ftell(NameOfFile); // Returns the position of pointer atm
+	ftell(PointerToFile); // Returns the position of pointer atm
 
 	// ATOI ATOF ATOL
 	int num1 = atoi(NameOfString); // transfers from ASCII -> Integer

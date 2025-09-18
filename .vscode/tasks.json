@@ -31,7 +31,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
-                "ex2_imp.c",
+                "test.c",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],

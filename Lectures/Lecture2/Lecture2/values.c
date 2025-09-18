@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-void f_x();
+void counter();
 
 //GLOBAL VALUE
 
@@ -9,10 +9,17 @@ void f_x();
 //LOCAL VALUE
 
 //STATIC VALUE
-void f_x()
-{
-	static int cnt = 1;
-	printf("%d", cnt);
-	cnt = cnt + 1;
+// Initialized only once when func called first time
 
+void counter() {
+    static int count = 0;  // Initialized once
+    count++;
+    printf("%d\n", count);
+}
+
+int main() {
+    counter();  // Output: 1
+    counter();  // Output: 2
+    counter();  // Output: 3
+    return 0;
 }

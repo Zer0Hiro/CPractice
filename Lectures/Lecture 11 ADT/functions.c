@@ -33,3 +33,7 @@ void name_Of_GenFunc(void*, void*)
     
 }
 
+// EXAMPLE
+
+int func(int a, float b, char c); // Specific function
+

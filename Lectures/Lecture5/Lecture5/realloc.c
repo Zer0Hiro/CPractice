@@ -14,7 +14,7 @@ int main()
 	// n + 2 is a new size of arr
 	temp = (int*)realloc(arr,(n + 2) * sizeof(int));
 	if (temp != NULL) arr = temp;
-	else return 1;
+	else free(arr); // If failed need to free memory
 	printf("%d", arr);
 	return 1;
 }
